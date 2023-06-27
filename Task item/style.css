@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --main-color: #1C1C1C;
+  }
+  
+  .task-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+    border-bottom: 1px solid var(--main-color);
+    padding: 0 16px 8px;
+    cursor: pointer;
+  }
+  .task-item:hover .task-item__btn  {
+    display: flex;
+  }
+    
+  .task-item__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+    flex-grow: 2;
+    margin-right: 16px;
+  }
+
+  .task-item__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-item__avatar {
+    border-radius: 50%;
+    height: 24px; 
+    width: 24px;
+  }
+  
+  .task-item__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-item__about {
+    display: flex;
+  }
+
+  .task-item__id {
+    margin-right: 24px;
+  }
+    
+  .task-item__creator,
+  .task-item__editor {
+    color: #8E8E8E;
+  }
+
+  .task-item__status {
+    margin-left: 24px;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 4px;
+    background: #9E6955;
+  }
+
+  .task-item__btn  {
+    display: none;
+    background: url("../img/dots.svg") no-repeat center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .task-item__btn:hover {
+    background-color: rgba(18, 19, 22, 0.5);
+  }
+  .task-item__btn:active {
+    background-color: #DCDCDE;
+    border-color: var(--main-color);
+  }
