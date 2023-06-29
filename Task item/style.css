@@ -82,7 +82,7 @@
     cursor: pointer;
   }
   .task-item__btn:hover {
-    background-color: rgba(18, 19, 22, 0.5);
+    background-color: #ECECEF;
   }
   .task-item__btn:active {
     background-color: #DCDCDE;
