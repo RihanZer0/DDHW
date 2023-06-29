@@ -62,7 +62,7 @@
     cursor: pointer;
   }
   .project-item__btn:hover {
-    background-color: rgba(18, 19, 22, 0.5);
+    background-color: #ECECEF;
   }
   .project-item__btn:active {
     background-color: #DCDCDE;
