@@ -1,0 +1,38 @@
+@import "./colors.scss";
+
+html, body {
+	height: 100%;
+}
+
+.container {
+	padding: 24px 24px;
+    height: 100%;
+	overflow-y: hidden;
+
+	&__block {
+		height: 100%;
+		display: flex;
+		@extend %dark-border;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&__text {
+			margin-bottom: 10px;
+		}
+		&__btn {
+            padding: 12px 16px;
+            border-radius: 4px;
+            color: $main-color;
+			background: $btn-color;
+			cursor: pointer;
+            border: none;
+			&:hover {
+				background: $btn-hover-color;
+			}
+			&:active {
+				background: $btn-active-color;
+			}
+		}
+	}
+}

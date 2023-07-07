@@ -1,0 +1,33 @@
+$main-color: white;
+$text-hover-color: #1C1c1C;
+$btn-color-hover: #ececef;
+$btn-color: #1f75cb;
+$btn-hover-color: #1068bf;
+$btn-active-color: #0b5cad;
+$text-span-color: #8e8e8e;
+$draft-bg-color: #9e6955;
+$btn-bg-color: $main-color;
+$btn-bg-color-active: #dcdcde;
+$btn-border-color-hover: #121316;
+$btn-border-color-active: $text-hover-color;
+$error: #ee4222;
+
+$main-font: "Open Sans", "Arial", sans-serif;
+%font {
+    font-family: $main-font;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+%box-radius {
+    border-radius: 4px;
+}
+
+  %dark-border {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    @extend %box-radius;
+  }
+
+  %box-shadow {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  }

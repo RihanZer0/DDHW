@@ -1,0 +1,113 @@
+@import "./colors.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.project-item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid black;
+	padding-right: 16px;
+
+	&:hover .options {
+		display: block;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		.project-item__block {
+			display: flex;
+			flex-direction: column;
+			padding: 14px 16px 8px;
+
+			&:hover {
+				display: block;
+			}
+
+			.item-block__header {
+				display: flex;
+				.header-text {
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin-bottom: 4px;
+				}
+			}
+
+			.item-block__footer {
+				display: flex;
+				justify-content: space-between;
+				
+                .footer {
+					display: flex;
+
+					&__name {
+						line-height: 19px;
+						color: $text-span-color;
+						margin-left: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.options {
+		display: none;
+        position: relative;
+		
+        .dropDown-btn {
+			width: 42px;
+			height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            background-color: $btn-bg-color;
+			@extend %dark-border;
+            svg {
+				width: 24px;
+				height: 24px;
+                pointer-events: none;
+			}
+            &:hover {
+				background-color: $btn-color-hover;
+				border-color: $btn-border-color-hover;
+			}
+		}
+        .dropActive {
+            background-color: $btn-bg-color-active;
+            border-color: $btn-border-color-active;
+        }
+		.dropDown__list {
+			display: none;
+			width: fit-content;
+			padding: 8px 0px;
+			background: $main-color;
+
+			&.open {
+				display: block;
+				position: absolute;
+				top: 45px;
+				right: 0;
+				@extend %box-shadow;
+			}
+
+			.drop-down__item {
+				padding: 8px 16px;
+				cursor: pointer;
+			}
+			
+            .delete {
+				color: $error;
+			}
+		}
+	}
+}

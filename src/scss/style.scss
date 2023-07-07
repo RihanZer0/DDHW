@@ -1,0 +1,24 @@
+@import './font.scss';
+@import "./addNav.scss";
+@import "./addPlug.scss";
+@import "./addProjectItem.scss";
+@import "./addTaskItem.scss";
+
+*{
+  @extend %font;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+ul {
+    list-style: none;
+  } 

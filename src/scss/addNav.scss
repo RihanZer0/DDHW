@@ -1,0 +1,109 @@
+@import "./colors.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	height: 90px;
+	padding: 24px;
+	background: $btn-color;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	&__list {
+		display: flex;
+		margin-right: 24px;
+
+		&-btn {
+			margin-left: 24px;
+
+			button {
+				height: 42px;
+				line-height: 1;
+				color: $main-color;
+				background-color: inherit;
+				padding: 12px 16px;
+				border: 1px solid $main-color;
+				border-radius: 4px;
+				cursor: pointer;
+			
+				&:hover {
+					color: $text-hover-color;
+					background: $btn-color-hover;
+				}
+			}
+
+			.btn-active {
+				background: $main-color;
+        		color: $text-hover-color;
+			}
+		}
+	}
+
+	&__user {
+		height: 42px;
+		display: flex;
+		flex-direction: column;
+		.dropDown-btn {
+			height: 42px;
+			display: flex;
+			align-items: center;
+
+			color: $main-color;
+			text-decoration: none;
+			background-color: inherit;
+			border: none;
+			padding: 12px 16px;
+			border-radius: 4px;
+			
+			img {
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				margin-right: 8px;
+				pointer-events: none;
+			}
+			svg {
+				width: 24px;
+				height: 24px;
+				pointer-events: none;
+			}
+
+			&:hover {
+				cursor: pointer;
+				outline: 1px solid $main-color;
+			}
+		}
+		.dropActive {
+			background: $main-color;
+			outline: 1px solid $main-color;
+			svg {
+				color: $btn-bg-color-active;
+				transform: rotate(180deg);
+			}
+		}
+		.dropDown__list {
+			display: none;
+			width: fit-content;
+			padding: 8px 0px;
+			background: $main-color;
+
+			&.open {
+				display: block;
+				position: absolute;
+				top: 68px;
+				right: 24px;
+				@extend %box-shadow;
+			}
+
+			.dropDown__item {
+				padding: 8px 16px;
+				list-style: none;
+        		cursor: pointer;
+			}
+		}
+	}
+}
